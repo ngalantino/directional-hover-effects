@@ -35,8 +35,6 @@ $(document).ready(function() {
         $back.css('--bg-image', 'url(' + backgroundImage + ')');
     });
 
-// data-bgImage = "https://locicerohealth.com/wp-content/uploads/2025/04/20250414_LoCicero_190.jpg"
-
     $('.menu-item-transform').on('mouseenter', function(e) {
 
         var $box = $(this).find('.info-box');

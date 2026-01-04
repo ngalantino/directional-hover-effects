@@ -20,7 +20,8 @@
     height: auto;
     backface-visibility: hidden; /* Hides the 'underneath' side */
     border-radius: 30px;
-
+    display:flex;
+    align-items: center;
 }
 
 .background::before {
@@ -79,6 +80,7 @@
     flex-direction: column;
     /* align-items: center; */
     justify-content: center;
+    width: 100%;
 }
 
 .sub-menu a {
