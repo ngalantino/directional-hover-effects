@@ -1,0 +1,72 @@
+/* The container that provides the 3D space */
+.menu-item-transform {
+    perspective: 1000px; 
+    width: 300px;
+}
+
+/* The element that actually rotates */
+.info-box {
+    max-width: 300px;
+    min-height: 150px;
+    position: relative;
+    transition: transform 0.4s;
+    transform-style: preserve-3d;
+}
+
+/* Front and Back faces */
+.info-box-front, .info-box-back {
+    position: absolute;
+    width: auto;
+    height: auto;
+    backface-visibility: hidden; /* Hides the 'underneath' side */
+    border-radius: 30px;
+
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  z-index: -1;
+  /* background: url('https://locicerohealth.com/wp-content/uploads/2025/04/20250414_LoCicero_190.jpg') no-repeat center; */
+  background: var(--bg-image) no-repeat center;
+  opacity: .2;
+  background-size: cover;
+  /* Add a smooth transition if desired */
+  transition: transform 0.5s ease-in-out; 
+}
+
+/* The 'Back' side (your new color) */
+.info-box-back {
+    background-size: cover;
+    background-position: center;
+    color: black;
+    transform: rotateY(180deg); /* Hidden by default */
+}
+
+.info-box-back.rotated-background::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  z-index: -1;
+  /* background: url('https://locicerohealth.com/wp-content/uploads/2025/04/20250414_LoCicero_190.jpg') no-repeat center; */
+  background: var(--bg-image) no-repeat center;
+  opacity: .2;
+  background-size: cover;
+  transform: rotate(180deg);
+  /* Add a smooth transition if desired */
+  transition: transform 0.5s ease-in-out; 
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.uagb-ifb-icon-wrap {
+    width: 10px;
+    height: auto;
+}
