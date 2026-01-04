@@ -22,7 +22,7 @@
     border-radius: 30px;
     display:flex;
     align-items: center;
-    margin: 10px;
+    /* margin: 10px; */
 }
 
 .background::before {
@@ -120,6 +120,26 @@
     font-weight: bold;
 }
 
+.arrow-icon::before {
+    position: absolute;
+    left: 5px;
+    font-family: "Material Symbols Outlined"; /* or 'Material Symbols Outlined' */
+    content: "arrow_right"; /* The unicode with a backslash */
+    font-weight: 900;
+    margin-right: 0px;
+    color: black; /* Matches your glass theme */
+}
+
+.arrow-icon-back {
+    position: relative;
+    top: 7px;
+}
+
+.info-box-text.sub-menu h3 {
+    position: relative;
+    right: 20px;
+}
+
 .tint-overlay {
     display: inherit;
     align-items: inherit;
@@ -139,4 +159,12 @@
     gap: 20px;
     flex-wrap: wrap;
     width: 60vw;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
