@@ -4,7 +4,8 @@ $(document).ready(function() {
     $('.info-box').each(function() {
         var $front = $(this).find('.info-box-front');
         var $back = $(this).find('.info-box-back');
-        
+        var $text = $(this).find('.info-box-text');
+
         // Temporarily remove absolute positioning to measure height
         $front.css('position', 'static');
         $back.css('position', 'static');
@@ -21,9 +22,10 @@ $(document).ready(function() {
         // Restore absolute positioning
         $front.css('position', 'absolute');
         $back.css('position', 'absolute');
-        
+
         // Set the height
         $(this).height(maxHeight);
+        $text.height(maxHeight)
         $front.height(maxHeight).width(maxWidth);
         $back.height(maxHeight).width(maxWidth);
 

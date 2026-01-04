@@ -42,7 +42,6 @@
 .info-box-back {
     background-size: cover;
     background-position: center;
-    color: black;
     transform: rotateY(180deg); /* Hidden by default */
 }
 
@@ -66,7 +65,55 @@
     transform: rotate(180deg);
 }
 
-.uagb-ifb-icon-wrap {
-    width: 10px;
-    height: auto;
+.info-box-text {
+	padding: 10px;
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #3f3f3f;
 }
+
+.sub-menu {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.sub-menu a {
+    text-decoration: none;
+    color: #3f3f3f;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.sub-menu-link {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.glass-card:hover {
+    /* Semi-transparent background */
+    background: rgba(255, 255, 255, 0.4);
+    
+    /* The "frosted" blur effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    
+    /* Subtle border to define the edges */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+    /* Optional styling for depth */
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+    padding: 10px;
+}
+
+.menu-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
